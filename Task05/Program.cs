@@ -8,16 +8,17 @@ Console.WriteLine("Введите число: ");
 
 int numb = Convert.ToInt32(Console.ReadLine());
 
-if (numb > 0) {
-int numb1 = -numb;
-
-int count = numb1;
-
-while (count <= numb)
+if (numb > 0)
 {
-    Console.Write(count + " ");
-    count++;
-}
+    int numb1 = -numb;
+
+    int count = numb1;
+
+    while (count <= numb)
+    {
+        Console.Write(count + " ");
+        count++;
+    }
 }
 
-else  Console.Write("Введено неккоректное значение");
+else Console.Write("Введено неккоректное значение");
