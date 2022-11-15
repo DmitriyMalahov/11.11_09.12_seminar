@@ -9,9 +9,9 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 if (number%2 == 0)
 {
-    Console.WriteLine($"Число {number} является четным");
+    Console.WriteLine($"Да, число {number} является четным");
 }
 else
 {
-    Console.WriteLine($"Число {number} не является четным");
+    Console.WriteLine($"Нет, число {number} не является четным");
 }
