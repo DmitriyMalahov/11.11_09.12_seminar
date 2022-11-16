@@ -17,7 +17,7 @@ Console.WriteLine("Введите второе число: ");
 int c = Convert.ToInt32(Console.ReadLine());
 
 int max = a;
-if (a > max) max = a;
+
 if (b > max) max = b;
 if (c > max) max = c;
 
