@@ -25,5 +25,4 @@ int RemoveSecondDigit(int num)
 // Console.WriteLine($"Вторая цифра --> {secondDigit}");
 // Console.WriteLine($"Третья цифра --> {thirdDigit}");
 
-int removeSecondDigit = RemoveSecondDigit(number);
-Console.WriteLine($"Результат удаления второго числа --> {removeSecondDigit}");
+Console.WriteLine($"Результат удаления второго числа --> {RemoveSecondDigit(number)}");
