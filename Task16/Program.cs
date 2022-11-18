@@ -15,7 +15,7 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 
 bool Square(int num1, int num2)
 {
-return (num1 == num2 * num2) || (num2 == num1 * num1);
+    return (num1 == num2 * num2) || (num2 == num1 * num1);
 }
 
 bool result = Square(number1, number2);
