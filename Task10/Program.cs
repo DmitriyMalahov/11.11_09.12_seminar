@@ -14,8 +14,16 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 bool Check(int num)
 {
-    return (num >= 100) && (num < 1000); // Проверка на трехзначность
+    return (num >= 100) && (num < 1000);
 }
 
 bool check = Check(number);
-Console.WriteLine(check ? $"Вторая цифра введеного числа {number = number / 10 % 10}" : "Введенное число не является трехзначным"); // Вывод числа 5
+
+int SecondNumber(int num)
+{
+num = num / 10 % 10;
+return num;
+}
+int secondNumber = SecondNumber(number);
+
+Console.WriteLine(check ? $"Вторая цифра введеного числа {secondNumber}" : "Введенное число не является трехзначным"); 

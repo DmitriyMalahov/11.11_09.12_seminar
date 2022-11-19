@@ -10,15 +10,13 @@
 Console.WriteLine("Введите число обозначающие день недели: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-if(number <=7)
-{
 bool Check(int numCheck)
 {
     return (numCheck == 7) || (numCheck == 6);
 }
-
 bool check = Check(number);
 Console.WriteLine(check ? "Да" : "Нет");
-}
+
+if(number <=7)Check(number);
 else Console.WriteLine("Такого дня недели нет");
 
