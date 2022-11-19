@@ -1,10 +1,14 @@
-﻿// Задача № 22:
-// Напишите программу, которая
+﻿// Задача 23
+// Напишите программу, которая 
 // 1. принимает на вход число (N) и 
-// 2. выдает таблицу квадратов от 1 до N.
+// 2. выдаёт таблицу кубов чисел от 1 до N.
 
-// 5 -> 1,4,9,16,25
-// 2 -> 1,4
+// 5 ->
+// 1 | 1
+// 2 | 8
+// 3 | 27
+// 4 | 64
+// 5 | 125
 
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
@@ -16,17 +20,7 @@ while (number < 1)
     if (number < 1) Console.WriteLine("Введено некорректное значение");
 }
 
-Console.WriteLine($"Таблица квадратов чисел от 1 до {number}: ");
-
-void TableSquare(int num)
-{
-    for (int count = 1; count <= num; count++)
-    {
-                Console.WriteLine($"{count}|{count*count}");
-    }
-}
-
-TableSquare(number);
+Console.WriteLine($"Таблица кубов чисел от 1 до {number}: ");
 
 // string TableSquare1(int num)
 // {
@@ -34,7 +28,7 @@ TableSquare(number);
 //     string table = "";
 //     while(count <= num)
 //     {
-//         table = table + $"{count}|{count*count} \n";
+//         table = table + $"{count}|{count*count*count} \n";
 //         count++;
 //     }
 //     return table;
@@ -43,3 +37,12 @@ TableSquare(number);
 // string tableSquare = TableSquare1(number);
 // Console.WriteLine(tableSquare);
 
+void TableSquare(int num)
+{
+    for (int count = 1; count <= num; count++)
+    {
+        Console.WriteLine($"{count}|{count * count * count}");
+    }
+}
+
+TableSquare(number);
