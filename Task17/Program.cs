@@ -36,7 +36,7 @@ int Quater(int xc, int yc)
 
 int quater = Quater(x, y);
 
-string result = quater > 0 
-        ? $"Указанные координаты соответсвуют четверти {quater}" 
+string result = quater > 0
+        ? $"Указанные координаты соответсвуют четверти {quater}"
         : "Введены некорректные координаты";
 Console.WriteLine(result);
