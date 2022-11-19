@@ -17,16 +17,16 @@
 // если х<0 и y<0 то будет 3 четверть
 // если х>0 и y<0 то будет 4 четверть
 
-Console.WriteLine("Введите номер четверти");
-Console.Write("№: ");
-int quater = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите номер четверти от 1 до 4");
+Console.Write("№ четверти: ");
+string quater = Console.ReadLine();
 
-string Range(int quater1)
+string Range(string quater1)
 {
-    if (quater1 == 1) return "x > 0 и y > 0";
-    if (quater1 == 2) return "x < 0 и y > 0";
-    if (quater1 == 3) return "x < 0 и y < 0";
-    if (quater1 == 4) return "x > 0 и y < 0";
+    if (quater1 == "1") return "Диапазон возможных координат точек в четверти 1: x > 0 и y > 0";
+    if (quater1 == "2") return "Диапазон возможных координат точек в четверти 2: x < 0 и y > 0";
+    if (quater1 == "3") return "Диапазон возможных координат точек в четверти 3: x < 0 и y < 0";
+    if (quater1 == "4") return "Диапазон возможных координат точек в четверти 4: x > 0 и y < 0";
     return "Такой четверти нет";
 }
 
