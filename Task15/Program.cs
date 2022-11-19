@@ -7,7 +7,7 @@
 // 7 -> да
 // 1 -> нет
 
-Console.WriteLine("Введите число обозначающее день недели: ");
+Console.WriteLine("Введите число обозначающие день недели: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 if(number <=7)
