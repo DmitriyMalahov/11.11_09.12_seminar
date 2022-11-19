@@ -14,7 +14,7 @@ while (number < 10000 & number <= 100000)
 {
     Console.WriteLine("Введите пятизначное число: ");
     number = Convert.ToInt32(Console.ReadLine());
-    if (number < 10000 & number <= 100000) Console.WriteLine("Введено некорректное значение"); // 123
+    if (number < 10000 & number <= 100000) Console.WriteLine("Введено некорректное значение"); 
 }
 
 int number1 = number;
