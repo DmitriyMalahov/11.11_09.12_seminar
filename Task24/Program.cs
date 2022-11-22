@@ -24,4 +24,5 @@ if (number > 0)
     int sumDigits = SumDigits(number);
     Console.WriteLine($"Сумма чисел от 1 до {number} равна {sumDigits}");
 }
-else Console.WriteLine("Требуется ввести натуральное число");
+else 
+Console.WriteLine("Требуется ввести натуральное число");
