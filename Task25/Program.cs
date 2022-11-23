@@ -22,7 +22,7 @@ double Power(double num1, double num2)
     return result;
 }
 
-if ((number1 > 0) && (number2 > 0))
+if (number2 > 0)
 {
     double pow = Power(number1, number2);
     Console.WriteLine($"Число {number1} в степени {number2} = {pow}");
