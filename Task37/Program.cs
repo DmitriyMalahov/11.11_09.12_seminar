@@ -25,23 +25,22 @@ int[] CreateArrayRndInt(int size, int min, int max)
     return arr;
 }
 
-void PrintArray(int[] arr)
+void PrintArray(int[] arr, string symbol1, string symbol2)
 {
-    Console.Write("[");
+    Console.Write(symbol1);
     for (int i = 0; i < arr.Length; i++)
     {
         if (i < arr.Length - 1) Console.Write($"{arr[i]},");
         else Console.Write($"{arr[i]}");
     }
-    Console.WriteLine("]");
+    Console.Write(symbol2);
 }
 
-int [] NewArray(int[] arr)
+int [] CreateNewArrayInt(int[] arr)
 {
     int newSize = arr.Length / 2;
     if (arr.Length % 2 == 1) newSize +=1;
     int [] newArray = new int [newSize];
-
     for (int i = 0; i < arr.Length / 2; i++)
     {
         newArray[i] = arr[i] * arr [arr.Length - 1 - i];
@@ -51,6 +50,6 @@ int [] NewArray(int[] arr)
 }
 
 int[] array = CreateArrayRndInt(sizeArray, minArray, maxArray);
-PrintArray(array);
-int[] newArr = NewArray(array);
-PrintArray(newArr);
+PrintArray(array, "[", "]");
+int[] newArr = CreateNewArrayInt(array);
+PrintArray(newArr, " -> ", "");

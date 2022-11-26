@@ -42,8 +42,7 @@ int TwoDigits(int[] arr)
     int result = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] > 9 && arr[i] < 100)
-            result++;
+        if (arr[i] > 9 && arr[i] < 100) result++;
     }
     return result;
 }
