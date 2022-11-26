@@ -1,10 +1,11 @@
-﻿// Задача 33:
-// 1. Задайте массив.
-// Напишите программу, которая
-// 2. определяет, присуствует ли заданное число в массиве.
+﻿// Задача 35:
+// 1. Задайте одномерный массив из чисел 123 случайных чисел.
+// 2. Найдите количество элементов массива, 
+// 3. значение которых лежит в отрезке [10,99].
 
-// 4; массив [6,7,19,345,3] -> нет 
-// 3; массив [6,7,19,345,3] -> да
+// [5,18,123,6,2] -> 1
+// [1,2,3,6,2] -> 0
+// [10,11,12,13,14] -> 5
 
 Console.WriteLine("Введите длину массива: ");
 int sizeArray = Convert.ToInt32(Console.ReadLine());
@@ -12,8 +13,6 @@ Console.WriteLine("Введите минимальное значение мас
 int minArray = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите максимальное значение массива: ");
 int maxArray = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число которое необходимо найти в массиве: ");
-int number = Convert.ToInt32(Console.ReadLine());
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {
@@ -23,7 +22,6 @@ int[] CreateArrayRndInt(int size, int min, int max)
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = rnd.Next(min, max + 1);
-
     }
     return arr;
 }
@@ -39,16 +37,18 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
-bool PresenceNumber(int[] arr, int num)
+int TwoDigits(int[] arr)
 {
+    int result = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] == num) return true;
+        if (arr[i] > 9 && arr[i] < 100)
+            result++;
     }
-    return false;
+    return result;
 }
 
 int[] array = CreateArrayRndInt(sizeArray, minArray, maxArray);
 PrintArray(array);
-Console.WriteLine("Найдено ли введенное число в массиве?: ");
-Console.WriteLine(PresenceNumber(array, number) ? "Да" : "Нет");
+int twoDigits = TwoDigits(array);
+Console.WriteLine($"Количество элементов массива, значения которых лежат в отрезке от 10 до 99 = {twoDigits}");

@@ -1,10 +1,10 @@
-﻿// Задача 33:
-// 1. Задайте массив.
-// Напишите программу, которая
-// 2. определяет, присуствует ли заданное число в массиве.
+﻿// Задача 37:
+// 1. Найдите произведение пар чисел в одномерном массиве.
+// Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+// 2. Результат запишите в новом массиве.
 
-// 4; массив [6,7,19,345,3] -> нет 
-// 3; массив [6,7,19,345,3] -> да
+// [1 2 3 4 5] -> 5 8 3
+// [6 7 9 6] -> 36 21
 
 Console.WriteLine("Введите длину массива: ");
 int sizeArray = Convert.ToInt32(Console.ReadLine());
@@ -12,8 +12,6 @@ Console.WriteLine("Введите минимальное значение мас
 int minArray = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите максимальное значение массива: ");
 int maxArray = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите число которое необходимо найти в массиве: ");
-int number = Convert.ToInt32(Console.ReadLine());
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {
@@ -23,7 +21,6 @@ int[] CreateArrayRndInt(int size, int min, int max)
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = rnd.Next(min, max + 1);
-
     }
     return arr;
 }
@@ -39,16 +36,21 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
-bool PresenceNumber(int[] arr, int num)
+int [] NewArray(int[] arr)
 {
-    for (int i = 0; i < arr.Length; i++)
+    int newSize = arr.Length / 2;
+    if (arr.Length % 2 == 1) newSize +=1;
+    int [] newArray = new int [newSize];
+
+    for (int i = 0; i < arr.Length / 2; i++)
     {
-        if (arr[i] == num) return true;
+        newArray[i] = arr[i] * arr [arr.Length - 1 - i];
     }
-    return false;
+    if (arr.Length % 2 == 1) newArray[newSize - 1] = arr[arr.Length / 2];
+    return newArray;
 }
 
 int[] array = CreateArrayRndInt(sizeArray, minArray, maxArray);
 PrintArray(array);
-Console.WriteLine("Найдено ли введенное число в массиве?: ");
-Console.WriteLine(PresenceNumber(array, number) ? "Да" : "Нет");
+int[] newArr = NewArray(array);
+PrintArray(newArr);
