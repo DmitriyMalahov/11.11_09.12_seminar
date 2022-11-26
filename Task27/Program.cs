@@ -17,10 +17,9 @@ if (number < 0)
     number = Math.Abs(number);
 }
 
-
 bool Check(int num)
 {
-    return (num > 0); 
+    return (num > 0);
 }
 
 int SumDigits(int number1)
@@ -36,10 +35,9 @@ int SumDigits(int number1)
         number1 = number1 / 10;
         sum = remains + sum;
     }
-
     return sum;
 }
 
 int sumDigits = SumDigits(number);
 bool check = Check(number);
-Console.WriteLine(check ?  $"Cумма цифр числа {number} равна = {sumDigits}" : "Введено не корректное значение");
+Console.WriteLine(check ? $"Cумма цифр числа {number} равна = {sumDigits}" : "Введено не корректное значение");

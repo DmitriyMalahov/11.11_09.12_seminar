@@ -18,10 +18,12 @@ void RandomArray(int[] arrayLocal)
 
 void PrintArray(int[] arrayLocal)
 {
+    Console.Write("[");
     for (int i = array.Length - 1; i >= 0; i--)
     {
-        Console.Write($"{arrayLocal[i]}, ");
+        Console.Write($"{arrayLocal[i]},");
     }
+    Console.Write("]");
 }
 
 RandomArray(array);
