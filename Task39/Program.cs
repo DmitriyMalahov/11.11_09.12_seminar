@@ -50,6 +50,10 @@ void ReverseArray(int[] array)
 int[] array = CreateArrayRndInt(sizeArray, minArray, maxArray);
 PrintArray(array, "[", "]");
 Console.WriteLine();
-// Array.Reverse(array);
+
 ReverseArray(array);
 PrintArray(array, "[", "]");
+Console.WriteLine();
+
+// Array.Reverse(array); // Встроенный метод
+// PrintArray(array, "[", "]");
