@@ -9,18 +9,18 @@
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-// string BinaryNum(int num)
-// {
-//     string bin = string.Empty;
-//     while (num > 0)
-//     {
-//         bin = num % 2 + bin;
-//         num /= 2;
-//     }
-// return bin;
-// }
+string BinaryNum(int num)
+{
+    string bin = string.Empty;
+    while (num > 0)
+    {
+        bin = num % 2 + bin;
+        num /= 2;
+    }
+    return bin;
+}
 
-// Console.WriteLine($"Число {number} преобразованное в двоичное -> {BinaryNum(number)}");
+Console.WriteLine($"Число {number} преобразованное в двоичное -> {BinaryNum(number)}");
 
 void PrintArray(int[] arr)
 {
@@ -34,21 +34,34 @@ void PrintArray(int[] arr)
 int[] BinaryN(int num)
 {
     int n = num;
-    int i = 0;
+    int sizeArray = 0;
     while (n > 0)
     {
         n /= 2;
-        i += 1;
+        sizeArray += 1;
     }
-    int[] bin = new int[i];
-    for (int j = 0; j < bin.Length; j++)
+    int[] binArray = new int[sizeArray];
+    for (int i = 0; i < binArray.Length; i++)
     {
-        bin[j] = num % 2;
+        binArray[i] = num % 2; 
+        // binArray[binArray.Length - 1] = num % 2; для разворота без доп методов.
         num /= 2;
     }
-    return bin;
+    // Array.Reverse(binArray);
+    return binArray;
 }
+
+void ReverseArray(int[] array)
+{
+    for (int i = 0; i < array.Length / 2; i++)
+    {
+        int temp = array[i];
+        array[i] = array[array.Length - 1 - i];
+        array[array.Length - 1 - i] = temp;
+    }
+}
+
 int[] binaryN = BinaryN(number);
-Array.Reverse(binaryN);
+ReverseArray(binaryN);
 Console.Write($"Число {number} преобразованное в двоичное -> ");
 PrintArray(binaryN);
