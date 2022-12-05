@@ -6,9 +6,6 @@
 
 // -1, -7, 567, 89, 223 -> 3
 
-Console.WriteLine("Укажите количество чисел которое Вы хотите ввести: ");
-int number = Convert.ToInt32(Console.ReadLine());
-
 int[] CreateArrayInt(int size)
 {
     int end = size;
@@ -42,6 +39,9 @@ void PositiveNumberCounter(int[] arr)
     }
     Console.WriteLine(result);
 }
+
+Console.WriteLine("Укажите количество чисел которое Вы хотите ввести: ");
+int number = Convert.ToInt32(Console.ReadLine());
 
 int[] array = CreateArrayInt(number);
 PrintArray(array, "", " введено чисел больше 0 -> ");

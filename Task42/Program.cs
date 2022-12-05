@@ -6,9 +6,6 @@
 // 3 -> 11
 // 2 -> 10
 
-Console.WriteLine("Введите число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-
 string BinaryNum(int num)
 {
     string bin = string.Empty;
@@ -19,8 +16,6 @@ string BinaryNum(int num)
     }
     return bin;
 }
-
-Console.WriteLine($"Число {number} преобразованное в двоичное -> {BinaryNum(number)}");
 
 void PrintArray(int[] arr)
 {
@@ -60,6 +55,12 @@ void ReverseArray(int[] array)
         array[array.Length - 1 - i] = temp;
     }
 }
+
+
+Console.WriteLine("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"Число {number} преобразованное в двоичное -> {BinaryNum(number)}");
 
 int[] binaryN = BinaryN(number);
 ReverseArray(binaryN);

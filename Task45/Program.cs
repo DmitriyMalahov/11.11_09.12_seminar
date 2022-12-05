@@ -4,12 +4,7 @@
 // 1. будет создавать копию заданного массива с помощью 
 // поэлементного копирования.
 
-Console.WriteLine("Введите длину массива: ");
-int sizeArray = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите минимальное значение массива: ");
-int minArray = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите максимальное значение массива: ");
-int maxArray = Convert.ToInt32(Console.ReadLine());
+
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {
@@ -42,6 +37,13 @@ int[] CopyArray(int[] arr)
     }
     return newArr;
 }
+
+Console.WriteLine("Введите длину массива: ");
+int sizeArray = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите минимальное значение массива: ");
+int minArray = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите максимальное значение массива: ");
+int maxArray = Convert.ToInt32(Console.ReadLine());
 
 int[] array = CreateArrayRndInt(sizeArray, minArray, maxArray);
 Console.Write("Исходный массив:      ");
