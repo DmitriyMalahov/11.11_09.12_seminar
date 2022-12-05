@@ -47,6 +47,5 @@ Console.WriteLine("Введите максимальное значение ма
 int maxMatrix = Convert.ToInt32(Console.ReadLine());
 
 double[,] array2D = CreateMatrixRndDouble(rowsMatrix, columnsMatrix, minMatrix, maxMatrix);
-// double differRoundArray2D = Math.Round(array2D, 1, MidpointRounding.ToZero);
 PrintMatrix(array2D, "|", "|", "|"); ;
 
