@@ -8,13 +8,13 @@
 
 
 
-double СoordinatesX(double ab, double ak, double cb, double ck)
+double СoordinateX(double ab, double ak, double cb, double ck)
 {
 double x = (cb - ab) / (ak - ck);
 return x;
 }
 
-double СoordinatesY(double ab, double ak, double xb)
+double СoordinateY(double ab, double ak, double xb)
 {
 double y = ak * xb + ab;
 return y;
@@ -30,8 +30,8 @@ Console.WriteLine("Введите k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 
 Console.Write($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} -> (");
-Console.Write($"{СoordinatesX(b1, k1, b2, k2)}; ");
+Console.Write($"{СoordinateX(b1, k1, b2, k2)}; ");
 
-Console.Write(СoordinatesY(b1, k1, СoordinatesX(b1, k1, b2, k2)));
+Console.Write(СoordinateY(b1, k1, СoordinateX(b1, k1, b2, k2)));
 Console.Write(")");
 
