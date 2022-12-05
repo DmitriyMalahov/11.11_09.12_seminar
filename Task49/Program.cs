@@ -39,14 +39,23 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
+// void SquareEvenElMatrix(int[,] matrix)
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             if (i % 2 == 0 && j % 2 == 0) matrix[i, j] *= matrix[i, j];
+//         }
+//     }
+// }
+
 void SquareEvenElMatrix(int[,] matrix)
 {
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i += 2)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (i % 2 == 0 && j % 2 == 0) matrix[i, j] *= matrix[i, j];
-        }
+        for (int j = 0; j < matrix.GetLength(1); j += 2) 
+        matrix[i, j] *= matrix[i, j];
     }
 }
 
