@@ -8,3 +8,45 @@
 //   1| -3,3|    8| -9,9|
 //   8|  7,8| -7,1|    9|
 
+double[,] CreateMatrixRndDouble(int rows, int columns, int min, int max)
+{
+    double[,] matrix = new double[rows, columns];
+    Random rnd = new Random();
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = rnd.NextDouble() * (max - min) + min;
+        }
+    }
+    return matrix;
+}
+
+void PrintMatrix(double[,] matrix, string symbol1, string symbol2, string symbol3)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        Console.Write($"{symbol1}");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{Math.Round(matrix[i, j], 1, MidpointRounding.ToZero),5}{symbol2}");
+            else Console.Write($"{Math.Round(matrix[i, j], 1, MidpointRounding.ToZero),5}");
+        }
+        Console.WriteLine($"{symbol3}");
+    }
+}
+
+Console.WriteLine("Введите количество строк: ");
+int rowsMatrix = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов: ");
+int columnsMatrix = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите минимальное значение массива: ");
+int minMatrix = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите максимальное значение массива: ");
+int maxMatrix = Convert.ToInt32(Console.ReadLine());
+
+double[,] array2D = CreateMatrixRndDouble(rowsMatrix, columnsMatrix, minMatrix, maxMatrix);
+// double differRoundArray2D = Math.Round(array2D, 1, MidpointRounding.ToZero);
+PrintMatrix(array2D, "|", "|", "|"); ;
+
