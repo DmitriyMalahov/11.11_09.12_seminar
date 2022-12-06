@@ -79,5 +79,5 @@ int[,] array2D = CreateMatrixRndInt(rowsMatrix, columnsMatrix, minMatrix, maxMat
 PrintMatrix(array2D, "|", "|", "|"); ;
 Console.WriteLine();
 double[] findSumColumn = FindSumColumn(array2D);
-Console.Write("Среднее арифметическое каждого столбца:");
+Console.WriteLine("Среднее арифметическое каждого столбца:");
 PrintArray(findSumColumn, "[", "]");
