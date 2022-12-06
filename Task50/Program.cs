@@ -68,3 +68,5 @@ int[,] array2D = CreateMatrixRndInt(rowsMatrix, columnsMatrix, minMatrix, maxMat
 PrintMatrix(array2D, "|", "|", "|"); ;
 Console.WriteLine();
 FiendElement(array2D, row, column);
+
+
