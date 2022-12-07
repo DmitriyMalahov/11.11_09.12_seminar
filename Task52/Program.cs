@@ -51,7 +51,6 @@ void PrintArray(double[] arr, string symbol1, string symbol2)
 double[] FindSumColumn(int[,] matrix)
 {
     int columns = matrix.GetLength(1);
-
     double[] sumArr = new double[columns];
     for (int j = 0; j < matrix.GetLength(1); j++)
     {

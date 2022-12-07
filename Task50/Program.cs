@@ -59,10 +59,21 @@ int minMatrix = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите максимальное значение массива: ");
 int maxMatrix = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите номер строк где располагается искомый элемент массива: ");
+Console.WriteLine("Введите номер строки где располагается искомый элемент массива: ");
 int row = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите номер столбца где располагается искомый элемент массива: ");
 int column = Convert.ToInt32(Console.ReadLine());
+
+while (row < 0 || column < 0)
+{
+    Console.WriteLine();
+    Console.WriteLine("Введите номер строки где располагается искомый элемент массива: ");
+    row = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Введите номер столбца где располагается искомый элемент массива: ");
+    column = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine();
+    if (row < 0 || column < 0) Console.WriteLine("Введено некорректное значение");
+}
 
 int[,] array2D = CreateMatrixRndInt(rowsMatrix, columnsMatrix, minMatrix, maxMatrix);
 PrintMatrix(array2D, "|", "|", "|"); ;
