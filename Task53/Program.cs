@@ -39,11 +39,10 @@ void ChangeRows(int[,] matrix)
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         temp = matrix[0, j];
-        matrix[0, j] = matrix[matrix.GetLength(0)-1, j];
-        matrix[matrix.GetLength(0)-1, j] = temp;
+        matrix[0, j] = matrix[matrix.GetLength(0) - 1, j];
+        matrix[matrix.GetLength(0) - 1, j] = temp;
     }
 }
-
 
 Console.WriteLine("Введите количество строк: ");
 int rowsMatrix = Convert.ToInt32(Console.ReadLine());
