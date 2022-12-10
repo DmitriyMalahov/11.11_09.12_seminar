@@ -57,7 +57,7 @@ double[] FindSumColumn(int[,] matrix)
         double count = 0;
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
-            sumArr[j] += matrix[i, j];
+            sumArr[j] += matrix[i, j]; // sumArr[j] = sumArr[j] + matrix[i, j]
             count++;
         }
         sumArr[j] = sumArr[j] / count;
