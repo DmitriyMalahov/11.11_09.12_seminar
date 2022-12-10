@@ -57,12 +57,10 @@ double[] FindSumRows(int[,] matrix)
     double[] sumArr = new double[columns];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            sumArr[i] += matrix[i, j]; // sumArr[j] = sumArr[j] + matrix[i, j]
+            sumArr[i] += matrix[i, j];
         }
-        sumArr[i] = sumArr[i];
     }
     return sumArr;
 }
@@ -79,6 +77,7 @@ void FindeMinSumRows(double[] arr)
             count = i;
         }
     }
+    Console.WriteLine();
     Console.WriteLine($"Номер строки с наименьшей суммой элементов: {count + 1} строка.");
     Console.WriteLine($"Индекс строки с наименьшей суммой элементов в массиве: {count}");
 

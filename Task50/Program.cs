@@ -42,7 +42,7 @@ void PrintMatrix(int[,] matrix, string symbol1, string symbol2, string symbol3)
     }
 }
 
-void FiendElement(int[,] matrix, int fiendRow, int fiendColumn)
+void FindElement(int[,] matrix, int fiendRow, int fiendColumn)
 {
     if (fiendRow < matrix.GetLength(0) && fiendColumn < matrix.GetLength(1))
         Console.WriteLine($"Такой элемент в массиве есть, он равен {matrix[fiendRow, fiendColumn]}");
@@ -78,6 +78,6 @@ while (row < 0 || column < 0)
 int[,] array2D = CreateMatrixRndInt(rowsMatrix, columnsMatrix, minMatrix, maxMatrix);
 PrintMatrix(array2D, "|", "|", "|"); ;
 Console.WriteLine();
-FiendElement(array2D, row, column);
+FindElement(array2D, row, column);
 
 
