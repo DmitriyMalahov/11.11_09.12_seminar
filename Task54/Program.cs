@@ -51,7 +51,7 @@ void DescendingOrderingElementsColums(int[,] matrix)
         {
             for (int k = 0; k < columns - 1; k++)
             {
-                if (matrix[i, k] > matrix[i, k + 1])
+                if (matrix[i, k] < matrix[i, k + 1])
                 {
                     int temp = 0;
                     temp = matrix[i, k];
