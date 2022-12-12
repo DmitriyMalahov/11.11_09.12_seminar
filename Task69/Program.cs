@@ -17,4 +17,12 @@ int Exponentiation(int num, int degree)
     return num * Exponentiation(num, degree - 1);
 }
 
+int ExponentiationOptimized(int num, int degree)
+{
+    if (degree == 0) return 1;
+    else if (degree % 2 == 0) return ExponentiationOptimized(num * num, degree / 2);
+    else return ExponentiationOptimized(num, degree - 1) * num;
+}
+
 Console.WriteLine(Exponentiation(number1, number2));
+Console.WriteLine(ExponentiationOptimized(number1, number2));
