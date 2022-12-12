@@ -11,11 +11,10 @@ int number1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе натуральное число:");
 int number2 = Convert.ToInt32(Console.ReadLine());
 
-int Exponentiation (int num, int degree)
+int Exponentiation(int num, int degree)
 {
-    if (degree > 1)
-    return num * Exponentiation(num, degree-1);
-    return num;
+    if (degree == 0) return 1;
+    return num * Exponentiation(num, degree - 1);
 }
 
 Console.WriteLine(Exponentiation(number1, number2));
