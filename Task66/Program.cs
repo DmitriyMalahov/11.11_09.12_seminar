@@ -11,8 +11,7 @@ int numberM = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите натуральное число N:");
 int numberN = Convert.ToInt32(Console.ReadLine());
 
-int sum = SumNaturalNumbers(numberM, numberN);
-Console.WriteLine(sum);
+Console.WriteLine(SumNaturalNumbers(numberM, numberN));
 
 int SumNaturalNumbers(int numM, int numN)
 {
